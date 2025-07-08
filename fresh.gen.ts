@@ -2,6 +2,8 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $_platform_deleteCookie from "./routes/(platform)/deleteCookie.ts";
+import * as $_platform_middleware from "./routes/(platform)/middleware.ts";
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $countries_name_ from "./routes/countries/[name].tsx";
@@ -12,6 +14,8 @@ import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
+    "./routes/(platform)/deleteCookie.ts": $_platform_deleteCookie,
+    "./routes/(platform)/middleware.ts": $_platform_middleware,
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/countries/[name].tsx": $countries_name_,

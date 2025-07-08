@@ -47,3 +47,16 @@
 .back-link:hover {
   text-decoration: underline;
 }
+.logout-button {
+  margin-top: 1rem;
+  background-color: #e11d48;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #be123c;
+}
