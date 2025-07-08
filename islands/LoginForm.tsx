@@ -15,14 +15,16 @@ const LoginForm: FunctionComponent<Props> = (props) => {
     c.name.toLowerCase().includes(searchTerm.value.toLowerCase())))
 
     return (
-        <div>
+        <div class="login-container">
             <SearchBar />
             <ul >
                 {filteredCountries.value.length === 0? (
-                    <p>No se encontró ningún país</p>
-                ): (filteredCountries.value.map((c) => (
-                    <CountryCard key={c.name} country={c} />
-                )))}
+                    <p class="no-results">No se encontró ningún país</p>
+                ): <div class="country-grid">
+                    {filteredCountries.value.map((c) => (
+                        <CountryCard key={c.name} country={c} />
+                    ))}
+                </div>}
             </ul>
         </div>
     )
